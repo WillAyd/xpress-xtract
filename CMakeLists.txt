@@ -25,7 +25,7 @@ include(ExternalProject)
 ExternalProject_Add(wimlib
   GIT_REPOSITORY git://wimlib.net/wimlib
   BUILD_IN_SOURCE 1
-  CONFIGURE_COMMAND ./bootstrap COMMAND ./configure
+  CONFIGURE_COMMAND ./bootstrap COMMAND ./configure --without-ntfs-3g
   )
 
 add_executable(xdecompress ${CMAKE_SOURCE_DIR}/xdecompress.c)
